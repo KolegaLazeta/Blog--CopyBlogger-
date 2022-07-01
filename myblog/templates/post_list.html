@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Template radi!</h1>
+{% for obj in object_list %}
+    <a href="{{ obj.get_absolute_url }}"> {{  obj.title  }}</a><br>
+    {{ obj.id }}<br>
+    {{ obj.content }}<br>
+    {{ obj.updated }}<br>
+    {{ obj.timestamp }}<br>
+
+{% endfor %}
+{% endblock content %}
